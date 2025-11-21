@@ -1,13 +1,8 @@
 # Ex02 Django ORM Web Application
-## Date: 
+## Date: 21/11/2025
 
 ## AIM
-To develop a Django Application to store and retrieve data from a E-Commerce Website Database for Amazon or Flipkart using Object Relational Mapping(ORM).
-
-
-## ENTITY RELATIONSHIP DIAGRAM
-
-
+To develop a Django application to store and retrieve data from a Car Inventory Database using Object Relational Mapping(ORM).
 
 ## DESIGN STEPS
 
@@ -21,31 +16,27 @@ Create a new app in Django project
 Enter the code for admin.py and models.py
 
 ### STEP 4:
-Execute Django admin and create details for 10 books
+Execute Django admin and create details for 5 Car 
 
 ## PROGRAM
 ```
-models.py
 from django.db import models
 from django.contrib import admin
 class Car(models.Model):
     brand_name=models.CharField(max_length=20)
-    car_name=models.CharField(max_length=18)
+    car_name=models.CharField(max_length=10)
     enginenum=models.IntegerField()
     release_date=models.DateField()
 
 class CarAdmin(admin.ModelAdmin):
-    list_display=('brand_name','car_name','enginenum','release_date')
-
- admin.py
- from django.contrib import admin
+    list_display=('brand_name', 'car_name', 'enginenum', 'release_date')
+  admin.py  
+from django.contrib import admin
 from.models import Car,CarAdmin
 admin.site.register(Car,CarAdmin)
-
 ```
-
 ## OUTPUT
-
 ![alt text](<Screenshot 2025-11-21 111743.png>)
+
 ## RESULT
-Thus the program for creating E-commerce website database using ORM hass been executed successfully
+Thus the program for creating car inventory database database using ORM hass been executed successfully
